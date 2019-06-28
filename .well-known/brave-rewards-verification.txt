@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: yaboicrypto.com
+Token: e7aec4e51e2191b84feab7e358c4f81e1bfcc60e422b2bec75f8abc79feb2101
