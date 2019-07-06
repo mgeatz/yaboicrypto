@@ -71,7 +71,13 @@
         }
 
         h3 {
-            margin: 40px 0 20px 0;
+            margin: 20px 0 20px 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            h3 {
+                margin: 0 0 20px 0;
+            }
         }
 
         h5 {
@@ -134,6 +140,16 @@
         .cover {
             pointer-events: none;
         }
+        .fas, .far {
+            color: #007bff;
+            padding-left: 3px;
+        }
+        .accordion {
+            border: 1px solid #007bff;
+        }
+        .border-left-blue {
+            border-left: 6px solid #007bff;
+        }
     </style>
 
     <script>
@@ -142,9 +158,14 @@
 			}
     </script>
 
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="fa/fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet"></link>
+
 </head>
 <body>
-<nav class="navbar navbar-dark">
+<nav class="navbar navbar-dark d-none d-md-block">
     <!-- Navbar content -->
     <small style="color: white; margin: 0 auto">Using the Brave browser? Send us 1BAT by clicking the
         pyramid icon in the browser bar above. Thanks!
@@ -211,6 +232,9 @@
 </div>
 
 <div class="pl-md-5 pr-md-5">
+
+
+    <!-- into -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -221,6 +245,8 @@
         <hr>
     </div>
 
+
+    <!-- Top Crypto Exchanges -->
     <div class="container-fluid">
 
         <h3>Top Crypto Exchanges:</h3>
@@ -250,18 +276,28 @@
             <div class="col-12 col-md-6">
                 <div class="alert alert-light border">
                     <h5># COINBASE</h5>
-                    <p>USA based company that provides a secure platform that makes it easy to buy, sell, and store
-                        cryptocurrency like Bitcoin, Ethereum, and more.</p>
-                    <a href="//coinbase-consumer.sjv.io/c/1456647/582420/9251" target="_blank" class="btn btn-primary">Coinbase Website</a>
-<!--                    <a href="https://www.coinbase.com/join/geatz_l" target="_blank" class="btn btn-primary">Coinbase Website</a>-->
+                    <p>Coinbase is a digital currency exchange headquartered in San Francisco, California. They broker
+                        exchanges of Bitcoin, Bitcoin Cash, Ethereum, Ethereum Classic, and Litecoin with fiat
+                        currencies in approximately 32 countries, and bitcoin transactions and storage in 190 countries
+                        worldwide.Coinbase has two core products: a Global Digital Asset Exchange (GDAX) for trading a
+                        variety of digital assets on its professional asset trading platform, and a user-facing retail
+                        broker of Bitcoin, Bitcoin Cash, Ether, Ethereum Classic, and Litecoin for fiat currency.It also
+                        offers an API for developers and merchants to build applications and accept payments in both
+                        digital currencies. The company offered buy/sell trading functionality in 32
+                        countries, while the cryptocurrency wallet was available in 190 countries worldwide.[40] On
+                        March 26, 2018. They intented to add support for ERC-20 tokens.</p>
+                    <a href="//coinbase-consumer.sjv.io/c/1456647/582420/9251" target="_blank" class="btn btn-primary">Coinbase
+                        Website</a>
+                    <!--                    <a href="https://www.coinbase.com/join/geatz_l" target="_blank" class="btn btn-primary">Coinbase Website</a>-->
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="alert alert-light border">
-                    <h5># UPHOLD</h5>
-                    <p>Serving 184+ countries, across 30+ currencies (traditional and crypto) and commodities with
-                        foreign exchange and cross-border remittance. </p>
-                    <a href="https://uphold.com/" target="_blank" class="btn btn-primary">Uphold Website</a>
+                    <!-- LightWidget WIDGET -->
+                    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+                    <iframe src="https://lightwidget.com/widgets/c2e950a9ad155fd5b1e49b19955e4c23.html" scrolling="no"
+                            allowtransparency="true" class="lightwidget-widget"
+                            style="width:100%;border:0;overflow:hidden;"></iframe>
                 </div>
             </div>
         </div>
@@ -272,9 +308,11 @@
         <br>
     </div>
 
+
+    <!-- Crypto Web Marketplace: -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-7">
+            <div class="col-12">
 
                 <h3>Crypto Web Marketplace:</h3>
                 <small>
@@ -283,53 +321,502 @@
                     applications motivated to be trustworthy and mature.
                 </small>
                 <br><br>
-                <div class="alert alert-light border" role="alert">
-                    <p>
-                        <b>→ Name:</b> Binance. <b>Type:</b> Exchange. <b>Cost:</b> Free.
-                        <a href="https://www.binance.com/?ref=37074444" target="_blank">Binance Homepage</a>
-                    </p>
-                </div>
-                <div class="alert alert-light border" role="alert">
-                    <p>
-                        <b>→ Name:</b> Coinmama. <b>Type:</b> Exchange. <b>Cost:</b> Free.
-                        <a href="https://go.coinmama.com/visit/?bta=57131&nci=5343" target="_blank">Coinmama
-                            Homepage</a>
-                    </p>
-                </div>
-                <div class="alert alert-light border" role="alert">
-                    <p>
-                        <b>→ Name:</b> Coinbase Pro. <b>Type:</b> Trading Platform. <b>Cost:</b> Free.
-                        <a href="//coinbase-consumer.sjv.io/c/1456647/582420/9251" target="_blank">Coinbase Pro Homepage</a>
-                    </p>
-                </div>
 
+                <!-- START COINBASE PROMO -->
+                <div class="accordion" id="accordionExample">
+                    <div class="border-left-blue">
+                        <div class="border border-bottom-0 border-right-0" id="headingOne">
+                            <div class="media position-relative">
 
-                <div class="ml-5">
-                    <small>
-                        <div>
-                            <a class="buy-with-crypto"
-                               href="https://commerce.coinbase.com/checkout/27c354c0-afc7-4d93-b20e-94a95bb1652f">
-                                <span>List your website for $5</span>
-                            </a>
-                            <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                            </script>
+                                <div class="media-body mt-3">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                            <h5 class="mt-0 pl-3">Coinbase</h5>
+                                            <a href="//coinbase-consumer.sjv.io/c/1456647/564368/9251">
+                                                <img class="m-3"
+                                                     src="//a.impactradius-go.com/display-ad/9251-564368" border="0"
+                                                     alt="" width="100"/></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Low Fees:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Popularity:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Good Speed:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Ease of Use:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>High Privacy (no/low KYC):</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>High Trust:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>TYPE:</h5>
+                                            <h3 class="special">
+                                                Exchange
+                                            </h3>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>GRADE:</h5>
+                                            <h3 class="special">
+                                                63%
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </small>
-                    <br>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>
+                                    Coinbase was founded in June 2012 by Brian Armstrong and Fred Ehrsam.
+                                    Blockchain.info co-founder Ben Reeves was part of the original founding team but
+                                    later parted ways with Armstrong due to a difference in how the Coinbase wallet
+                                    should operate. The remaining founding team enrolled in the Summer 2012 Y
+                                    Combinator startup incubator program. In October 2012, the company launched the
+                                    services to buy and sell bitcoin through bank transfers. In May 2013, the company
+                                    received a US$5 million Series A investment led by Fred Wilson from the venture
+                                    capital firm Union Square Ventures. In December 2013, the company received a
+                                    US$25 million investment, from the venture capital firms Andreessen Horowitz, Union
+                                    Square Ventures (USV), and Ribbit Capital.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- END COINBASE PROMO 1 -->
+                <br>
 
+                <!-- START BINANCE PROMO 1 -->
+                <div class="accordion" id="accordionExample2">
+                    <div class="border-left-blue">
+                        <div class="border border-bottom-0 border-right-0" id="headingOne2">
+                            <div class="media position-relative">
+
+                                <div class="media-body mt-3">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                            <h5 class="mt-0 pl-3">Binance</h5>
+                                            <a href="https://www.binance.com/?ref=37074444" target="_blank">
+                                                <img class="m-3"
+                                                     src="images/binance_icon.png" border="0"
+                                                     alt="" width="100"/></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Low Fees:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Popularity:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Good Speed:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Ease of Use:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>High Privacy (no/low KYC):</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>High Trust:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>TYPE:</h5>
+                                            <h3 class="special">
+                                                Exchange/Trading
+                                            </h3>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>GRADE:</h5>
+                                            <h3 class="special">
+                                                67%
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2"
+                             data-parent="#accordionExample2">
+                            <div class="card-body">
+                                <p>
+                                    Coinbase was founded in June 2012 by Brian Armstrong and Fred Ehrsam.
+                                    Blockchain.info co-founder Ben Reeves was part of the original founding team but
+                                    later parted ways with Armstrong due to a difference in how the Coinbase wallet
+                                    should operate. The remaining founding team enrolled in the Summer 2012 Y
+                                    Combinator startup incubator program. In October 2012, the company launched the
+                                    services to buy and sell bitcoin through bank transfers. In May 2013, the company
+                                    received a US$5 million Series A investment led by Fred Wilson from the venture
+                                    capital firm Union Square Ventures. In December 2013, the company received a
+                                    US$25 million investment, from the venture capital firms Andreessen Horowitz, Union
+                                    Square Ventures (USV), and Ribbit Capital.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END BINANCE PROMO -->
+                <br>
+
+                <!-- START COINBASE PRO PROMO 1 -->
+                <div class="accordion" id="pro_coinbase_accordion">
+                    <div class="border-left-blue">
+                        <div class="border border-bottom-0 border-right-0" id="pro_coinbase_accordion_header">
+                            <div class="media position-relative">
+
+                                <div class="media-body mt-3">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                            <h5 class="mt-0 pl-3">PRO Coinbase</h5>
+                                            <a href="//coinbase-consumer.sjv.io/c/1456647/564368/9251" target="_blank">
+                                                <img class="m-3"
+                                                     src="images/pro_coinbase.png" border="0"
+                                                     alt="" width="100"/></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Low Fees:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Popularity:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Good Speed:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Ease of Use:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>High Privacy (no/low KYC):</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>High Trust:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>TYPE:</h5>
+                                            <h3 class="special">
+                                                Trading
+                                            </h3>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>GRADE:</h5>
+                                            <h3 class="special">
+                                                53%
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pro_coinbase_accordion_details" class="collapse"
+                             aria-labelledby="pro_coinbase_accordion_header"
+                             data-parent="#pro_coinbase_accordion">
+                            <div class="card-body">
+                                <p>
+                                    Coinbase was founded in June 2012 by Brian Armstrong and Fred Ehrsam.
+                                    Blockchain.info co-founder Ben Reeves was part of the original founding team but
+                                    later parted ways with Armstrong due to a difference in how the Coinbase wallet
+                                    should operate. The remaining founding team enrolled in the Summer 2012 Y
+                                    Combinator startup incubator program. In October 2012, the company launched the
+                                    services to buy and sell bitcoin through bank transfers. In May 2013, the company
+                                    received a US$5 million Series A investment led by Fred Wilson from the venture
+                                    capital firm Union Square Ventures. In December 2013, the company received a
+                                    US$25 million investment, from the venture capital firms Andreessen Horowitz, Union
+                                    Square Ventures (USV), and Ribbit Capital.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END COINBASE PRO PROMO -->
+                <br>
+
+                <!-- START DCOIN PROMO -->
+                <div class="accordion" id="dcoin_accordion">
+                    <div class="border-left-blue">
+                        <div class="border border-bottom-0 border-right-0" id="dcoin_accordion_header">
+                            <div class="media position-relative">
+
+                                <div class="media-body mt-3">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                            <h5 class="mt-0 pl-3">Dcoin</h5>
+                                            <a href="https://www.dcoin.com/register?iv=UNBRS4" target="_blank">
+                                                <img class="m-3"
+                                                     src="images/dcoin.png" border="0"
+                                                     alt="" width="100"/></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Low Fees:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Popularity:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>Good Speed:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>Ease of Use:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <div>
+                                                <b>High Privacy (no/low KYC):</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                            <div>
+                                                <b>High Trust:</b><br>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <i class="fas fa-thumbs-up"></i>
+
+                                                <i class="far fa-thumbs-up"></i>
+                                                <i class="far fa-thumbs-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>TYPE:</h5>
+                                            <h3 class="special">
+                                                Exchange/Trading
+                                            </h3>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pt-sm-2 pt-md-5 ml-3 ml-md-0 ml-lg-0">
+                                            <h5>GRADE:</h5>
+                                            <h3 class="special">
+                                                67%
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dcoin_accordion_details" class="collapse"
+                             aria-labelledby="dcoin_accordion_header"
+                             data-parent="#dcoin_accordion">
+                            <div class="card-body">
+                                <p>
+                                    Coinbase was founded in June 2012 by Brian Armstrong and Fred Ehrsam.
+                                    Blockchain.info co-founder Ben Reeves was part of the original founding team but
+                                    later parted ways with Armstrong due to a difference in how the Coinbase wallet
+                                    should operate. The remaining founding team enrolled in the Summer 2012 Y
+                                    Combinator startup incubator program. In October 2012, the company launched the
+                                    services to buy and sell bitcoin through bank transfers. In May 2013, the company
+                                    received a US$5 million Series A investment led by Fred Wilson from the venture
+                                    capital firm Union Square Ventures. In December 2013, the company received a
+                                    US$25 million investment, from the venture capital firms Andreessen Horowitz, Union
+                                    Square Ventures (USV), and Ribbit Capital.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END DCOIN PROMO -->
+
+
+                <br>
             </div>
-            <!-- end additional exchanges -->
-            <div class="col-12 col-md-5">
-                <!-- LightWidget WIDGET -->
-                <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-                <iframe src="https://lightwidget.com/widgets/c2e950a9ad155fd5b1e49b19955e4c23.html" scrolling="no"
-                        allowtransparency="true" class="lightwidget-widget"
-                        style="width:100%;border:0;overflow:hidden;"></iframe>
-            </div>
+
+
+            <!--            <div class="alert alert-light border" role="alert">-->
+            <!--                <p>-->
+            <!--                    <b>→ Name:</b> Binance. <b>Type:</b> Exchange. <b>Cost:</b> Free.-->
+            <!--                    <a href="https://www.binance.com/?ref=37074444" target="_blank">Binance Homepage</a>-->
+            <!--                </p>-->
+            <!--            </div>-->
+            <!--            <div class="alert alert-light border" role="alert">-->
+            <!--                <p>-->
+            <!--                    <b>→ Name:</b> Coinmama. <b>Type:</b> Exchange. <b>Cost:</b> Free.-->
+            <!--                    <a href="https://go.coinmama.com/visit/?bta=57131&nci=5343" target="_blank">Coinmama-->
+            <!--                        Homepage</a>-->
+            <!--                </p>-->
+            <!--            </div>-->
+            <!--            <div class="alert alert-light border" role="alert">-->
+            <!--                <p>-->
+            <!--                    <b>→ Name:</b> Coinbase Pro. <b>Type:</b> Trading Platform. <b>Cost:</b> Free.-->
+            <!--                    <a href="//coinbase-consumer.sjv.io/c/1456647/582420/9251" target="_blank">Coinbase Pro Homepage</a>-->
+            <!--                </p>-->
+            <!--            </div>-->
+
         </div>
+
+        <div class="mt-5">
+            <small>
+                <div>
+                    <a class="buy-with-crypto"
+                       href="https://commerce.coinbase.com/checkout/27c354c0-afc7-4d93-b20e-94a95bb1652f">
+                        <span>List Your Platform</span>
+                    </a>
+                    <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
+                    </script>
+                </div>
+            </small>
+            <br>
+        </div>
+
     </div>
 
+
+    <!-- Top Crypto Web Browser: -->
     <div class="container-fluid">
 
         <h3>Top Crypto Web Browser:</h3>
@@ -355,9 +842,11 @@
         <br>
 
     </div>
+
 </div>
 
 
+<!-- Crypto Market Health Check: -->
 <div class="container-fluid blue_background">
     <br>
     <h3>Crypto Market Health Check:</h3>
@@ -370,7 +859,7 @@
     <div class="cover">
         <div class="row">
             <div class="col-12 col-md-4">
-                <!-- TradingView Widget BEGIN -->
+                <!-- TradingView Widget BEGIN BTC-->
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
                     <div class="tradingview-widget-copyright"><a
@@ -412,7 +901,7 @@
                 <!-- TradingView Widget END -->
             </div>
             <div class="col-12 col-md-4">
-                <!-- TradingView Widget BEGIN -->
+                <!-- TradingView Widget BEGIN LTC-->
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
                     <div class="tradingview-widget-copyright"><a
@@ -454,7 +943,7 @@
                 <!-- TradingView Widget END -->
             </div>
             <div class="col-12 col-md-4">
-                <!-- TradingView Widget BEGIN -->
+                <!-- TradingView Widget BEGIN XRP-->
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
                     <div class="tradingview-widget-copyright"><a
@@ -499,19 +988,20 @@
     </div>
     <br>
     <br>
-    <div class="accordion" id="accordionExample">
+    <div class="accordion" id="yaboicrypto_accordion">
         <div class="card">
-            <div class="card-header" id="headingOne">
+            <div class="card-header" id="yaboicrypto_heading">
                 <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                            data-target="#yaboicrypto_accordion_inner"
+                            aria-expanded="true" aria-controls="yaboicrypto_accordion_inner">
                         About <i>Ya Boi Crypto</i>
                     </button>
                 </h2>
             </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                 data-parent="#accordionExample">
+            <div id="yaboicrypto_accordion_inner" class="collapse show" aria-labelledby="yaboicrypto_heading"
+                 data-parent="#yaboicrypto_accordion">
                 <div class="card-body">
                     <small style="color: black">
                         <i>YaBoiCrypto</i> intends to offer visitors relevant cryptocurrency information, including
@@ -576,5 +1066,7 @@
     </div>
 
 </footer>
+
+
 </body>
 </html>
